@@ -1,0 +1,10 @@
+Model: Meta MMS-TTS Thai (facebook/mms-tts-tha) — Quantized ONNX VitsModel
+Source: https://huggingface.co/facebook/mms-tts-tha
+ONNX Conversion: https://huggingface.co/payam1394/traxlate-mms-tts-tha (onnx/model_quantized.onnx)
+Tokens & Metadata Reference: https://huggingface.co/csukuangfj/vits-mms-tha
+Architecture: VITS (Variational Inference with adversarial learning for end-to-end Text-to-Speech)
+Language: Thai (th-TH / ISO 639-3: tha)
+Sample Rate: 16,000 Hz (16-bit PCM / Float32 waveform output)
+Vocabulary Size: 71 Thai characters, vowels, tone marks, digits, and punctuation (add_blank = true, pad_token_id = 0)
+License: Creative Commons Attribution-NonCommercial 4.0 International (CC-BY-NC-4.0)
+https://creativecommons.org/licenses/by-nc/4.0/

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SiamVoice TTS</string>
+    <string name="tts_engine_label">SiamVoice Hybrid Thai TTS (Gemini + Offline)</string>
+    <string name="tts_sample_text_th">สวัสดีครับ ยินดีต้อนรับสู่ระบบสังเคราะห์เสียงภาษาไทยไฮบริด</string>
+    <string name="tts_sample_text_en">Welcome to SiamVoice Hybrid Text to Speech engine.</string>
+    <string name="tab_studio">สตูดิโอเสียง</string>
+    <string name="tab_navigation">นำทางด่วน</string>
+    <string name="tab_assistant">AI อัจฉริยะ</string>
+    <string name="tab_diagnostics">วินิจฉัยระบบ</string>
+    <string name="btn_synthesize">สังเคราะห์เสียงพูด</string>
+    <string name="btn_play">เล่นเสียง</string>
+    <string name="btn_stop">หยุด</string>
+    <string name="btn_export_wav">บันทึก WAV</string>
+    <string name="label_model_selection">รุ่นโมเดล Gemini TTS</string>
+    <string name="label_voice_selection">เสียงพูด (Voice)</string>
+    <string name="label_style_selection">สไตล์การพูด (Speaking Style)</string>
+    <string name="label_routing_policy">โหมดการทำงาน (Hybrid Routing)</string>
+</resources>

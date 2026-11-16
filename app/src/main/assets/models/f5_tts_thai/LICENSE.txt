@@ -1,0 +1,41 @@
+Models & Assets: VIZINTZOR/F5-TTS-THAI (v1), VIZINTZOR/F5-TTS-TH-V2, and VIZINTZOR/F5-TH-ONNX
+Sources:
+  - https://huggingface.co/VIZINTZOR/F5-TTS-THAI
+  - https://huggingface.co/VIZINTZOR/F5-TTS-TH-V2
+  - https://huggingface.co/VIZINTZOR/F5-TH-ONNX
+  - https://github.com/VYNCX/F5-TTS-THAI
+  - Base Architecture: https://github.com/SWivid/F5-TTS (MIT License)
+  - Vocoder: https://huggingface.co/charactr/vocos-mel-24khz (MIT License)
+  - VachanaTTS ONNX: https://huggingface.co/VIZINTZOR/VachanaTTS (MIT License)
+
+Architecture Specification:
+  - Backbone: Diffusion Transformer (DiT) with ConvNeXt V2 conditioning (F5TTS_v1_Base)
+  - Hyperparameters: dim=1024, depth=22, heads=16, ff_mult=2, text_dim=512, conv_layers=4
+  - Mel-Spectrogram & Vocoder: Vocos 24,000 Hz (n_mel_channels=100, hop_length=256, win_length=1024, n_fft=1024)
+  - Tokenizer v1 (F5-TTS-THAI): Character-level UTF-8 vocabulary (vocab_v1.txt, 2,586 tokens)
+  - Tokenizer v2 (F5-TTS-TH-V2): Phoneme / IPA vocabulary (vocab_v2.txt, 2,554 tokens)
+  - Tokenizer ONNX (F5-TH-ONNX): Thai IPA phoneme vocabulary (f5_onnx_vocab.json, 79 symbols)
+  - Reference Conditioning: 24,000 Hz 16-bit Mono PCM reference audio (2-8 seconds) + matching Thai reference transcript
+
+Verified SHA-256 Checksums:
+  - vocab_v1.txt (11,419 bytes): 88200c1e2121226fb9b7a12f5d8bab399b856bb7538b1e6b39a220ee9475187c
+  - vocab_v2.txt (11,278 bytes): 2b36c1da892f014a889f340b8cfb0a8c264eb59495282e28adcee70698db85bd
+  - f5_onnx_vocab.json (1,386 bytes): 27dfba9becaee978edba7e0023424da3cd50aba6e742e96114e3fd63753545c9
+  - f5_config.json (755 bytes): 9f439ff211dabb4bfe862b9a461983eec3f80233504ef833ddbf5074664b9ea6
+  - f5_setting.json (554 bytes): 78bb65c7d5123749cad9526a0189a162b021f28be2fb3f704d8c0f457c9a6034
+  - ref_audio_1.wav (386,802 bytes): f2786aa1c286b572a046a8cc69e6fc5657e0367c69c2c02912b54803fa369f08
+  - ref_audio_2.wav (419,876 bytes): 962cc688f9ff894ce401741a5eb8aa325d2b9fcba42151019b71b71119f9e7a7
+  - Preprocess.onnx (85,315,725 bytes): 16d897f3b24892690862aa589dd6cb9dd66ebfb7f97e07f28835171de56ecb8c
+  - Transformer.onnx (662,647,405 bytes): e5da478232d77c62a70aa0161e74b912ecd1aea4f0f2901613bd717bc7612695
+  - Vocoder.onnx (62,546,909 bytes): 635570d31718ae25efbbf4f948f9a25856f3c65cea3e3650852e09a1e8f32682
+
+Licensing & Redistribution Notice:
+  1. VIZINTZOR/F5-TTS-THAI & F5-TTS-TH-V2 weights and reference audio are licensed under
+     Creative Commons Attribution 4.0 International (CC-BY-4.0, https://creativecommons.org/licenses/by/4.0/).
+     Commercial use and redistribution are permitted with attribution to VIZINTZOR (VYNCX/F5-TTS-THAI)
+     and training datasets (Porameht/processed-voice-th-169k, CMKL/Porjai-Thai-voice-dataset-central).
+  2. Base F5-TTS code (SWivid/F5-TTS), Vocos 24kHz vocoder (charactr/vocos-mel-24khz), and
+     VachanaTTS ONNX voices (VIZINTZOR/VachanaTTS) are licensed under the MIT License.
+  3. The bundled low-latency Thai VITS fallback model (facebook/mms-tts-tha in assets/models/thai_vits_onnx/)
+     is licensed under CC-BY-NC-4.0 (research and non-commercial use only). For commercial redistribution,
+     use F5-TTS-THAI (CC-BY-4.0) or VachanaTTS (MIT).

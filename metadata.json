@@ -1,0 +1,6 @@
+{
+  "name": "SiamVoice TTS",
+  "description": "Production-grade Thai-first Hybrid Text-to-Speech studio with Gemini 3.8 Flash TTS, local Android TTS fallback, WAV export, and system TTS engine service.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
